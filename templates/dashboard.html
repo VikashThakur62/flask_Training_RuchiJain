@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<div class="card">
+  <h2>Dashboard Page </h2>
+  <div class="body">
+    {% include "_flash.html" %}
+    <p style="text-align:center;font-size:1.3rem;font-weight:700;color:var(--blue-d)">
+      🏠 Library Dashboard</p>
+    <p style="text-align:center;color:var(--muted)">Welcome, {{ session['name'] }}</p>
+    <a class="btn green" href="{{ url_for('issue_book') }}">＋ Submit (Issue Book)</a>
+    <a class="btn purple" href="{{ url_for('view_books') }}">View Book</a>
+    <a class="link" href="{{ url_for('logout') }}">Logout</a>
+  </div>
+</div>
+{% endblock %}

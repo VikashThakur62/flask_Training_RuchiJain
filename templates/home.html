@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card"><div class="body hero">
+  {% include "_flash.html" %}
+  <div class="logo">📚</div>
+  <h1>Library Management System</h1>
+  <div class="row">
+    <a class="btn" href="{{ url_for('signup') }}">Sign Up</a>
+    <a class="btn purple" href="{{ url_for('login') }}">Login</a>
+  </div>
+</div></div>
+{% endblock %}

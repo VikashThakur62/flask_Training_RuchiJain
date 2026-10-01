@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Average</title>
+</head>
+
+<body>
+
+    <h1>Calculate Average Marks</h1>
+
+    <form action="{{ url_for('calculate') }}" method="post">
+
+        <div>
+            <label>Maths</label>
+            <input type="text" name="maths" placeholder="Enter Maths marks" required>
+        </div>
+
+        <br>
+
+        <div>
+            <label>Science</label>
+            <input type="text" name="science" placeholder="Enter Science marks" required>
+        </div>
+
+        <br>
+
+        <div>
+            <label>History</label>
+            <input type="text" name="history" placeholder="Enter History marks" required>
+        </div>
+
+        <br>
+
+        <button type="submit">Calculate Marks</button>
+
+    </form>
+
+</body>
+</html>

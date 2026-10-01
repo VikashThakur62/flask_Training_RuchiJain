@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+
+    <h1>Calculator</h1>
+
+    <form action="/calculate" method="POST">
+
+        <label>Enter  Number:</label>
+        <input type="number" name="num1" step="any" required>
+
+        <br><br>
+
+        <label>Enter Number:</label>
+        <input type="number" name="num2" step="any" required>
+
+        <br><br>
+
+        <label>Select Operation:</label>
+
+        <select name="operation">
+            <option value="add">+</option>
+            <option value="sub">-</option>
+            <option value="mul">*</option>
+            <option value="div">/</option>
+        </select>
+
+        <br><br>
+
+        <button type="submit">Result</button>
+
+    </form>
+
+    {% if result is defined %}
+        <h2>Result: {{ result }}</h2>
+    {% endif %}
+
+</body>
+</html>

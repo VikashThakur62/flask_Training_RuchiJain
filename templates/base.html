@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Library Management System{% endblock %}</title>
+  <style>
+    :root{--blue:#1e88f5;--blue-d:#0d47a1;--purple:#8b5cf6;--green:#22b07d;
+          --bg:#eef5fd;--card:#fff;--line:#c9dcf2;--text:#16325c;--muted:#5d7496}
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;background:var(--bg);color:var(--text);
+         font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;
+         display:flex;align-items:center;justify-content:center;padding:24px}
+    .card{background:var(--card);border:2px solid var(--blue-d);border-radius:12px;
+          width:100%;max-width:440px;overflow:hidden;
+          box-shadow:0 8px 24px rgba(13,71,161,.12)}
+    .card.wide{max-width:860px}
+    .card h2{margin:0;padding:14px 20px;background:#dcebfb;text-align:center;
+             font-size:1.15rem;color:var(--blue-d)}
+    .card h2 small{font-weight:400;color:var(--muted);font-size:.8rem}
+    .body{padding:22px 24px}
+    label{display:block;margin:12px 0 4px;font-weight:600;font-size:.9rem}
+    input{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:6px;
+          font-size:.95rem;background:#fbfdff;color:var(--text)}
+    input:focus{outline:2px solid var(--blue);border-color:var(--blue)}
+    .btn{display:block;width:100%;margin-top:16px;padding:11px;border:0;border-radius:6px;
+         background:var(--blue);color:#fff;font-size:1rem;font-weight:600;
+         text-align:center;text-decoration:none;cursor:pointer}
+    .btn:hover{filter:brightness(.93)}
+    .btn.purple{background:var(--purple)}
+    .btn.green{background:var(--green)}
+    .row{display:flex;gap:12px}.row .btn{margin-top:16px}
+    .link{display:block;text-align:center;margin-top:14px;color:var(--blue-d);font-size:.9rem}
+    .hero{text-align:center}
+    .hero .logo{font-size:3.2rem;line-height:1}
+    .hero h1{margin:8px 0 6px;font-size:1.7rem;color:var(--blue-d)}
+    .flash{margin:0 0 12px;padding:10px 12px;border-radius:6px;font-size:.9rem}
+    .flash.error{background:#fdecea;color:#a12622;border:1px solid #f5c2c0}
+    .flash.success{background:#e6f7ee;color:#1a6b45;border:1px solid #b7e4cc}
+    table{width:100%;border-collapse:collapse;font-size:.9rem}
+    th,td{border:1px solid var(--line);padding:10px;text-align:center}
+    th{background:#eaf3fd}
+    .wrapper{overflow-x:auto}
+    .empty{text-align:center;color:var(--muted);padding:20px}
+    .detail{display:flex;padding:6px 0;font-size:1rem}
+    .detail span:first-child{width:130px;color:var(--muted)}
+    .ok{background:#e6f7ee;border:1px solid #b7e4cc;color:#1a6b45;font-weight:700;
+        text-align:center;padding:14px;border-radius:8px;margin-bottom:14px}
+    @media(max-width:480px){.row{flex-direction:column;gap:0}}
+  </style>
+</head>
+<body>
+  {% block content %}{% endblock %}
+</body>
+</html>

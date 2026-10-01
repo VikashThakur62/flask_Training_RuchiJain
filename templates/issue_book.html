@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Issue Book{% endblock %}
+{% block content %}
+<div class="card">
+  <h2>Book Issue Form Page </h2>
+  <form class="body" method="post">
+    {% include "_flash.html" %}
+    <label for="book_id">Book ID</label>
+    <input id="book_id" name="book_id" placeholder="Enter book ID" value="{{ request.form.book_id }}" required>
+    <label for="book_name">Book Name</label>
+    <input id="book_name" name="book_name" placeholder="Enter book name" value="{{ request.form.book_name }}" required>
+    <label for="book_number">Book Number</label>
+    <input id="book_number" name="book_number" placeholder="Enter book number" value="{{ request.form.book_number }}" required>
+    <label for="student_name">Name of Student</label>
+    <input id="student_name" name="student_name" placeholder="Enter student name" value="{{ request.form.student_name }}" required>
+    <label for="issue_date">Issue Date</label>
+    <input id="issue_date" type="date" name="issue_date" value="{{ request.form.issue_date }}" required>
+    <label for="due_date">Due Date</label>
+    <input id="due_date" type="date" name="due_date" value="{{ request.form.due_date }}" required>
+    <button class="btn" type="submit">Submit</button>
+    <a class="link" href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+  </form>
+</div>
+{% endblock %}

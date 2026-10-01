@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Book Details{% endblock %}
+{% block content %}
+<div class="card wide">
+  <h2>Book Details</h2>
+  <div class="body">
+    {% include "_flash.html" %}
+    {% if books %}
+    <div class="wrapper">
+      <table>
+        <thead><tr>
+          <th>Book ID</th><th>Book Name</th><th>Book Number</th>
+          <th>Name of Student</th><th>Issue Date</th><th>Due Date</th>
+        </tr></thead>
+        <tbody>
+        {% for b in books %}
+          <tr>
+            <td>{{ b['book_id'] }}</td><td>{{ b['book_name'] }}</td>
+            <td>{{ b['book_number'] }}</td><td>{{ b['student_name'] }}</td>
+            <td>{{ b['issue_date'] }}</td><td>{{ b['due_date'] }}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% else %}
+      <p class="empty">No books have been issued yet. Issue one from the dashboard.</p>
+    {% endif %}
+    <a class="btn" style="max-width:220px" href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+  </div>
+</div>
+{% endblock %}

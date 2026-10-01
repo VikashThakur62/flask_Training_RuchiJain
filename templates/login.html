@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<div class="card">
+  <h2>Login Page </h2>
+  <form class="body" method="post">
+    {% include "_flash.html" %}
+    <label for="username">Username</label>
+    <input id="username" name="username" placeholder="Enter username" required>
+    <label for="password">Password</label>
+    <input id="password" type="password" name="password" placeholder="Enter password" required>
+    <button class="btn" type="submit">Login</button>
+    <a class="link" href="{{ url_for('signup') }}">Create New Account</a>
+  </form>
+</div>
+{% endblock %}

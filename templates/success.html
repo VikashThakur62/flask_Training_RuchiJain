@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Book Issued{% endblock %}
+{% block content %}
+<div class="card">
+  <h2>Book Issued Successfully Page <small>(success.html)</small></h2>
+  <div class="body">
+    <div class="ok">✔ Book Issued Successfully!</div>
+    <div class="detail"><span>Book Name</span><span>: {{ issue['book_name'] }}</span></div>
+    <div class="detail"><span>Student Name</span><span>: {{ issue['student_name'] }}</span></div>
+    <div class="detail"><span>Issue Date</span><span>: {{ issue['issue_date'] }}</span></div>
+    <div class="row">
+      <a class="btn" href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+      <a class="btn purple" href="{{ url_for('view_books') }}">View Book</a>
+    </div>
+  </div>
+</div>
+{% endblock %}
